@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MDVIEW</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <section class="button-container">
+            <h1>Markdown Visualizer</h1>
+            <button id="downloadButton">Descargar Archivo HTML</button>
+        </section>
+        
+        <main class="container">
+            <section class="input-md-text">
+                <textarea id="input" placeholder="Escribe en markdown..."></textarea>
+            </section>
+    
+            <section class="output-html-text">
+                <div class="output" id="output"></div>
+            </section>    
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
