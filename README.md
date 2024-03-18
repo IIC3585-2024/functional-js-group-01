@@ -2,7 +2,7 @@
 
 Esta tarea consiste en crear una pequeña aplicación que convierta un archivo Markdown (.md) a HTML, utilizando programación funcional en JavaScript.
 
-## Contenido
+## Contenido y funciones
 
 ## Instrucciones de ejecución
 
