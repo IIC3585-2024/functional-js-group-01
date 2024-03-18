@@ -1,5 +1,3 @@
-const fs = require("fs");
-
 // DICCIONARIO MARKDOWN TO HTML
 const equivalence = {
   "#": { open_tag: "<h1>", close_tag: "</h1>" },
@@ -56,16 +54,3 @@ const wrapInLine = (text, wrap) => {
   text = text.replace(/(<code>.*?)<code>(.*?)<\/code>(.*?<\/code>)/g, "$1 `$2` $3");
   return text;
 };
-
-
-
-
-const filePath = "text.md";
-fs.readFile(filePath, "utf8", (err, data) => {
-  if (err) {
-    console.error("Error al leer el archivo:", err);
-    return;
-  }
-
-  console.log(wrapInLine(data, wrap));
-});
