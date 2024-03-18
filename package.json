@@ -1,0 +1,17 @@
+{
+  "name": "functional-js-group-01",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/IIC3585-2024/functional-js-group-01.git",
+  "author": "carmebe <carmebe@uc.cl>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  }
+}
