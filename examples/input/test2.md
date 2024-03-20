@@ -5,11 +5,11 @@ And this is the second line.
 
 I just love **bold text**.
 I just love __bold text__.
-Love**is**bold.
+Love **is** bold.
 
 Italicized text is the *cat's meow*.
 Italicized text is the _cat's meow_.
-A*cat*meow.
+A *cat* meow.
 
 This text is ***really important***.
 This text is ___really important___.
@@ -28,3 +28,21 @@ At the command prompt, type `nano`.
 ###### Heading h6
 
 como vemos estoy usando #dentro y no lo ##toma, tamos bien
+
+> abc
+>
+> abc
+>> abc
+>>
+>> abc
+>>> abc
+>>>
+>>> abc
+>>>> abc
+>>>>
+>>>> abc
+>>>>> abc
+>>>>>
+>>>>> abc
+>>
+>> abc
