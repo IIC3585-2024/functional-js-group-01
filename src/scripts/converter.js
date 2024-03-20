@@ -1,62 +1,17 @@
-/* eslint-disable camelcase */
-import mdToHTML from './tags.js';
-import mdToRegex from './regex.js';
-
-// ENVUELVE TEXTO HACIENDO CONVERSIÓN DE ETIQUETAS
-const wrap = ({ tag = '', text }) => {
-  const { open_tag, close_tag } = mdToHTML[tag];
-  return `${open_tag}${text}${close_tag}`;
-};
-
-const parseTags = (text) => {
-  let newText = text;
-  const mdSymbols = Object.keys(mdToRegex);
-  mdSymbols.forEach((symbol) => {
-    newText = newText.replace(mdToRegex[symbol], wrap({ tag: symbol, text: '$1' }));
-  });
-  return newText;
-};
-
-const parseParagraphs = (text) => {
-  let newText = text;
-  newText = newText.replace(/\n{2,}/g, '</p><p>');
-  newText = `<p>${newText}</p>`;
-  return newText;
-};
-
-const parseCodeBlocks = (text) => {
-  let newText = text;
-  newText = newText.replace(/<code>(.*?)<code>(.*?)<\/code>(.*?)<\/code>/g, '<code>$1`$2`$3</code>');
-  newText = newText.replace(/<\/code>\n<code>/g, '\n');
-  return newText;
-};
-
-const parseBlocksQuotes = (text) => {
-  let newText = text;
-  newText = newText.replace(/<\/blockquote>(\n|\n>\n)<blockquote>/g, '');
-  newText = newText.replace(/<p><blockquote>/g, '<blockquote>');
-  newText = newText.replace(/<\/blockquote><\/p>/g, '</blockquote>');
-  return newText;
-};
-
-const parseHeaders = (text) => {
-  let newText = text;
-  const headers = ['1', '2', '3', '4', '5', '6'];
-  headers.forEach((h) => {
-    newText = newText.replace(new RegExp(`<p><h${h}>`, 'g'), `<h${h}>`);
-    newText = newText.replace(new RegExp(`</h${h}></p>`, 'g'), `</h${h}>`);
-  });
-  return newText;
-};
+import parseTags from "./parsers/tags.js";
+import parseParagraphs from "./parsers/paragraphs.js";
+import parseCodeBlocks from "./parsers/codeBlocks.js";
+import parseBlockQuotes from "./parsers/blockQuotes.js";
+import parseHeaders from "./parsers/headers.js";
 
 // REEMPLAZA ETIQUETAS INTERNAS (bold, italic, bold-italic, code, br, h's)
-const wrapInLine = (text) => {
+const convertMdToHTML = (text) => {
   let newText = parseTags(text);
   newText = parseParagraphs(newText);
   newText = parseCodeBlocks(newText);
-  newText = parseBlocksQuotes(newText);
+  newText = parseBlockQuotes(newText);
   newText = parseHeaders(newText);
   return newText;
 };
 
-export default wrapInLine;
+export default convertMdToHTML;

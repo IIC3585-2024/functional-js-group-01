@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-escape */
 /* eslint-disable quote-props */
 // DICCIONARIO MARKDOWN TO REGEX
-const mdToRegex = {
+const mdRegex = {
   '***': /\*\*\*(.*?)\*\*\*/g,
   '___': /\_\_\_(.*?)\_\_\_/g,
   '__*': /\_\_\*(.*?)\*\_\_/g,
@@ -12,7 +12,7 @@ const mdToRegex = {
 
   '*': /\*(.*?)\*/g,
   '_': /\_(.*?)\_/g,
-
+  
   '``': /\`\`(.*?)\`\`/g,
   '`': /\`(.*?)\`/g,
   '    ': /^ {4,}(.+)/gm,
@@ -33,4 +33,4 @@ const mdToRegex = {
   '>': /^>{1,}(.+)/gm,
 };
 
-export default mdToRegex;
+export default mdRegex;

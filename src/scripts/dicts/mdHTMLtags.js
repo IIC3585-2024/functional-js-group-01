@@ -1,6 +1,6 @@
 /* eslint-disable quote-props */
 // DICCIONARIO MARKDOWN TO HTML
-const mdToHTML = {
+const mdHTMLTags = {
   '': { open_tag: '<p>', close_tag: '</p>' },
 
   '***': { open_tag: '<em><strong>', close_tag: '</strong></em>' },
@@ -34,4 +34,4 @@ const mdToHTML = {
   '>': { open_tag: '<blockquote><p>', close_tag: '</p></blockquote>' },
 };
 
-export default mdToHTML;
+export default mdHTMLTags;
