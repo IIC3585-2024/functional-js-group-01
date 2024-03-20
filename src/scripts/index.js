@@ -1,4 +1,5 @@
 import wrapInLine from './converter.js';
+import mdListToHtml from './orderedListConverter.js';
 
 // RENDERIZA EL TEXTO EN HTML
 let htmlRendered = '';
@@ -8,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   markdownInput.addEventListener('input', () => {
     const md = markdownInput.value;
-    const html = wrapInLine(md);
+    const html = mdListToHtml(wrapInLine(md));
     htmlRendered = html;
     renderedOutput.innerHTML = html;
   });
