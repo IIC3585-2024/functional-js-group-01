@@ -17,19 +17,25 @@ const parseTags = (text) => {
   return newText;
 };
 
-const parseBlocks = (text) => {
-  let newText = text;
-  newText = newText.replace(/(<code>.*?)<code>(.*?)<\/code>(.*?<\/code>)/g, '$1 `$2` $3');
-  newText = newText.replace(/<\/blockquote>(\n|\n>\n)<blockquote>/g, '');
-  newText = newText.replace(/<p><blockquote>/g, '<blockquote>');
-  newText = newText.replace(/<\/blockquote><\/p>/g, '</blockquote>');
-  return newText;
-};
-
 const parseParagraphs = (text) => {
   let newText = text;
   newText = newText.replace(/\n{2,}/g, '</p><p>');
   newText = `<p>${newText}</p>`;
+  return newText;
+};
+
+const parseCodeBlocks = (text) => {
+  let newText = text;
+  newText = newText.replace(/<code>(.*?)<code>(.*?)<\/code>(.*?)<\/code>/g, '<code>$1`$2`$3</code>');
+  newText = newText.replace(/<\/code>\n<code>/g, '\n');
+  return newText;
+};
+
+const parseBlocksQuotes = (text) => {
+  let newText = text;
+  newText = newText.replace(/<\/blockquote>(\n|\n>\n)<blockquote>/g, '');
+  newText = newText.replace(/<p><blockquote>/g, '<blockquote>');
+  newText = newText.replace(/<\/blockquote><\/p>/g, '</blockquote>');
   return newText;
 };
 
@@ -47,7 +53,8 @@ const parseHeaders = (text) => {
 const wrapInLine = (text) => {
   let newText = parseTags(text);
   newText = parseParagraphs(newText);
-  newText = parseBlocks(newText);
+  newText = parseCodeBlocks(newText);
+  newText = parseBlocksQuotes(newText);
   newText = parseHeaders(newText);
   return newText;
 };

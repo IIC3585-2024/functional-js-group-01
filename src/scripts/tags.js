@@ -26,8 +26,10 @@ const mdToHTML = {
   '==': { open_tag: '<h1>', close_tag: '</h1>' },
   '--': { open_tag: '<h2>', close_tag: '</h2>' },
 
-  '`': { open_tag: '<code>', close_tag: '</code>' },
   '``': { open_tag: '<code>', close_tag: '</code>' },
+  '`': { open_tag: '<code>', close_tag: '</code>' },
+  '    ': { open_tag: '<code>', close_tag: '</code>' },
+  '\t': { open_tag: '<code>', close_tag: '</code>' },
 
   '>': { open_tag: '<blockquote><p>', close_tag: '</p></blockquote>' },
 };
