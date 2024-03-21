@@ -49,9 +49,9 @@ const parseUnordLists = (text) => {
     .map((txt) => txt.join('\n'));
 
   let newText = text;
-  for (let i = 0; i < fragments.length; i += 1) {
-    newText = newText.replace(fragments[i], convertedTexts[i]);
-  }
+  fragments.forEach((fragment, i) => {
+    newText = newText.replace(fragment, convertedTexts[i]);
+  });
 
   return newText;
 };

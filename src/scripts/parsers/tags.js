@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import mdHTMLTags from '../dicts/mdHTMLtags.js';
+import mdHTMLTags from '../dicts/mdHTMLTags.js';
 import mdRegex from '../dicts/mdRegex.js';
 
 // ENVUELVE TEXTO HACIENDO CONVERSIÓN DE ETIQUETAS

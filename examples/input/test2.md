@@ -33,20 +33,105 @@ Heading h2 (alternativo)
 
 como vemos estoy usando #dentro y no lo ##toma, tamos bien
 
-> abc
+1. First item
+2. Second item
+3. Third item
+    1. Indented item
+    2. Indented item
+4. Fourth item
+
+1. First item ALT
+2. Second item ALT
+3. Third item ALT
+    1. Indented item ALT
+        1. Indented in in ALT
+        1. Indented in in ALT
+    2. Indented item ALT
+4. Fourth item ALT
+
+1. First item ALT
+2. Second item ALT
+3. Third item ALT
+    1. Indented item ALT
+        1. Indented in in ALT
+        1. Indented in in ALT
+    2. Indented item ALT
+        1. Indented in in ALT
+4. Fourth item ALT
+
+1. First item ALT
+2. Second item ALT
+3. Third item ALT
+    1. Indented item ALT
+        1. Indented in in ALT
+        1. Indented in in ALT
+    2. Indented item ALT
+        1. Indented in in ALT
+        1. Indented in in ALT
+4. Fourth item ALT
+
+1. First item ALT
+2. Second item ALT
+3. Third item ALT
+    1. Indented item ALT
+        1. Indented in in ALT
+        1. Indented in in ALT
+
+- First item
+- Second item
+- Third item
+    - Indented item
+    - Indented item
+- Fourth item
+
+- First item ALT
+- Second item ALT
+- Third item ALT
+    - Indented item ALT
+        - Indented in in ALT
+        - Indented in in ALT
+    - Indented item ALT
+- Fourth item ALT
+
+- First item ALT
+- Second item ALT
+- Third item ALT
+    - Indented item ALT
+        - Indented in in ALT
+        - Indented in in ALT
+    - Indented item ALT
+        - Indented in in ALT
+- Fourth item ALT
+
+- First item ALT
+- Second item ALT
+- Third item ALT
+    - Indented item ALT
+        - Indented in in ALT
+        - Indented in in ALT
+    - Indented item ALT
+        - Indented in in ALT
+        - Indented in in ALT
+- Fourth item ALT
+
+- First item ALT
+- Second item ALT
+- Third item ALT
+    - Indented item ALT
+        - Indented in in ALT
+        - Indented in in ALT
+
+1. # aaa
+2. # bcbcbc
+    1. # abc
+    2. ### bccdsafas
+    3. #### bvccxvbcv
+        8. ##### scbcbx
+        6. ###### aafasfas
+
+> # The quarterly results look great!
 >
-> abc
->> abc
->>
->> abc
->>> abc
->>>
->>> abc
->>>> abc
->>>>
->>>> abc
->>>>> abc
->>>>>
->>>>> abc
->>
->> abc
+> - Revenue was off the chart.
+> - Profits were higher than ever.
+>
+>  *Everything* is going according to **plan**.

@@ -16,20 +16,13 @@ const mdHTMLTags = {
 
   '  \n': { open_tag: '', close_tag: '</br>' },
 
-  '######': { open_tag: '<h6>', close_tag: '</h6>' },
-  '#####': { open_tag: '<h5>', close_tag: '</h5>' },
-  '####': { open_tag: '<h4>', close_tag: '</h4>' },
-  '###': { open_tag: '<h3>', close_tag: '</h3>' },
-  '##': { open_tag: '<h2>', close_tag: '</h2>' },
-  '#': { open_tag: '<h1>', close_tag: '</h1>' },
-
   '==': { open_tag: '<h1>', close_tag: '</h1>' },
   '--': { open_tag: '<h2>', close_tag: '</h2>' },
 
   '``': { open_tag: '<code>', close_tag: '</code>' },
   '`': { open_tag: '<code>', close_tag: '</code>' },
 
-  '>': { open_tag: '<blockquote><p>', close_tag: '</p></blockquote>' },
+  '>': { open_tag: '<blockquote>', close_tag: '</blockquote>' },
 };
 
 export default mdHTMLTags;

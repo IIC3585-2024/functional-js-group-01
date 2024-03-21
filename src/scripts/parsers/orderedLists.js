@@ -1,9 +1,9 @@
-const assignTag = (texto) => {
+const assignTag = (text) => {
   let level = 0;
   const result = [];
 
   result.push('<ol>');
-  texto.forEach((line) => {
+  text.forEach((line) => {
     const matches = line.match(/^(\s*)<li>(.*)<\/li>$/);
     if (matches) {
       const indent = matches[1].length / 4; // 4 espacios por nivel de indentación
@@ -49,9 +49,9 @@ const parseOrdLists = (text) => {
     .map((txt) => txt.join('\n'));
 
   let newText = text;
-  for (let i = 0; i < fragments.length; i += 1) {
-    newText = newText.replace(fragments[i], convertedTexts[i]);
-  }
+  fragments.forEach((fragment, i) => {
+    newText = newText.replace(fragment, convertedTexts[i]);
+  });
 
   return newText;
 };

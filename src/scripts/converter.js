@@ -11,9 +11,9 @@ const convertMdToHTML = (text) => {
   let newText = parseTags(text);
   newText = parseCodeBlocks(newText);
   newText = parseBlockQuotes(newText);
-  newText = parseHeaders(newText);
   newText = parseOrdLists(newText);
   newText = parseUnordLists(newText);
+  newText = parseHeaders(newText);
   newText = parseParagraphs(newText);
   return newText;
 };
