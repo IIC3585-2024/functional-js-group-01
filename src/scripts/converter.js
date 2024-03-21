@@ -1,8 +1,8 @@
-import parseTags from "./parsers/tags.js";
-import parseParagraphs from "./parsers/paragraphs.js";
-import parseCodeBlocks from "./parsers/codeBlocks.js";
-import parseBlockQuotes from "./parsers/blockQuotes.js";
-import parseHeaders from "./parsers/headers.js";
+import parseTags from './parsers/tags.js';
+import parseParagraphs from './parsers/paragraphs.js';
+import parseCodeBlocks from './parsers/codeBlocks.js';
+import parseBlockQuotes from './parsers/blockQuotes.js';
+import parseHeaders from './parsers/headers.js';
 
 // REEMPLAZA ETIQUETAS INTERNAS (bold, italic, bold-italic, code, br, h's)
 const convertMdToHTML = (text) => {

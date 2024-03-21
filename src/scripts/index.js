@@ -6,8 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const markdownInput = document.getElementById('input');
   const renderedOutput = document.getElementById('output');
 
+  htmlRendered = localStorage.getItem('htmlRendered') || '';
   markdownInput.value = localStorage.getItem('textInput') || '';
-  renderedOutput.innerHTML = localStorage.getItem('htmlRendered') || '';
+  renderedOutput.innerHTML = htmlRendered;
 
   markdownInput.addEventListener('input', () => {
     const md = markdownInput.value;
