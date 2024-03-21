@@ -28,8 +28,6 @@ const mdHTMLTags = {
 
   '``': { open_tag: '<code>', close_tag: '</code>' },
   '`': { open_tag: '<code>', close_tag: '</code>' },
-  '    ': { open_tag: '<code>', close_tag: '</code>' },
-  '\t': { open_tag: '<code>', close_tag: '</code>' },
 
   '>': { open_tag: '<blockquote><p>', close_tag: '</p></blockquote>' },
 };
