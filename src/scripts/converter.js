@@ -5,6 +5,7 @@ import parseParagraphs from './parsers/paragraphs.js';
 import parseCodeBlocks from './parsers/codeBlocks.js';
 import parseBlockQuotes from './parsers/blockQuotes.js';
 import parseHeaders from './parsers/headers.js';
+import parseLinkImages from './parsers/images.js';
 
 // REEMPLAZA ETIQUETAS INTERNAS (bold, italic, bold-italic, code, br, h's)
 const convertMdToHTML = (text) => {
@@ -15,6 +16,7 @@ const convertMdToHTML = (text) => {
   newText = parseUnordLists(newText);
   newText = parseHeaders(newText);
   newText = parseParagraphs(newText);
+  newText = parseLinkImages(newText);
   return newText;
 };
 
