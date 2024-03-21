@@ -21,7 +21,11 @@ At the command prompt, type `nano`.
 ``Use `code` in your Markdown file.``
 
 # Heading h1
+Heading h1 (alternativo)
+========================
 ## Heading h2
+Heading h2 (alternativo)
+------------------------
 ### Heading h3
 #### Heading h4
 ##### Heading h5
@@ -46,5 +50,3 @@ como vemos estoy usando #dentro y no lo ##toma, tamos bien
 >>>>> abc
 >>
 >> abc
-
-``a `` a ``a``
