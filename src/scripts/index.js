@@ -1,7 +1,7 @@
 import wrapInLine from './converter.js';
 import mdListToHtml from './orderedListConverter.js';
 import mdUnorderedListToHtml from './unorderedListConverter.js';
-
+import mdImagesToHtml from './imageConverter.js';
 // RENDERIZA EL TEXTO EN HTML
 let htmlRendered = '';
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   markdownInput.addEventListener('input', () => {
     const md = markdownInput.value;
-    const html = mdUnorderedListToHtml(mdListToHtml(wrapInLine(md))) 
+    const html = mdUnorderedListToHtml(mdListToHtml(wrapInLine( mdImagesToHtml(md)))) 
     htmlRendered = html;
     renderedOutput.innerHTML = html;
   });
