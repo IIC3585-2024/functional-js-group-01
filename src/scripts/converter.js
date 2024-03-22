@@ -3,6 +3,7 @@ import parseOrdLists from './parsers/orderedLists.js';
 import parseUnordLists from './parsers/unorderedLists.js';
 import parseParagraphs from './parsers/paragraphs.js';
 import parseCodeBlocks from './parsers/codeBlocks.js';
+import parseCode from './parsers/code.js';
 import parseBlockQuotes from './parsers/blockQuotes.js';
 import parseHeaders from './parsers/headers.js';
 import parseLinkImages from './parsers/images.js';
@@ -11,6 +12,7 @@ import parseLinkImages from './parsers/images.js';
 const convertMdToHTML = (text) => {
   let newText = parseTags(text);
   newText = parseCodeBlocks(newText);
+  newText = parseCode(newText);
   newText = parseBlockQuotes(newText);
   newText = parseOrdLists(newText);
   newText = parseUnordLists(newText);
