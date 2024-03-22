@@ -1,4 +1,4 @@
-PROBAMOS CADA UNO DE LOS EJEMPLOS DE LA DOCUMENTACIÓN
+# PROBAMOS CADA UNO DE LOS EJEMPLOS DE LA DOCUMENTACIÓM
 
 This is the first line.
 And this is the second line.
@@ -123,18 +123,35 @@ como vemos estoy usando #dentro y no lo ##toma, tamos bien
 
 1. # aaa
 2. # bcbcbc
-    1. # abc
+    3. # abc
     2. ### bccdsafas
-    3. #### bvccxvbcv
+    1. #### bvccxvbcv
         8. ##### scbcbx
         6. ###### aafasfas
 
 > # The quarterly results look great!
 >
 > - Revenue was off the chart.
-> - Profits were higher than ever.
 >
->  *Everything* is going according to **plan**.
+> *Everything* is going according to **plan**.
+>
+>> abc
+>>
+>> abc
+>>> abc
+>>>
+>>> abc
+> abc
+
+aaa
+
+***
+
+Try to put a blank line before...
+
+---
+
+...and after a horizontal rule.
 
 [Google](https://google.com)
 
@@ -142,4 +159,4 @@ como vemos estoy usando #dentro y no lo ##toma, tamos bien
 
 ![abc](https://mdg.imgix.net/assets/images/san-juan-mountains.jpg)
 
-![abc](https://mdg.imgix.net/assets/images/san-juan-mountains.jpg "abc")
+![abc](https://mdg.imgix.net/assets/images/san-juan-mountains.jpg "Mountains")

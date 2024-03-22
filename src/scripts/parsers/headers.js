@@ -11,14 +11,9 @@ const parseHeaders = (text) => {
   let newText = text;
   const mdSymbols = Object.keys(mdHeaderRegex);
   mdSymbols.forEach((symbol) => {
-    newText = newText.replace(mdHeaderRegex[symbol], `$3${wrap({ tag: symbol, text: '$4' })}`);
+    newText = newText.replace(mdHeaderRegex[symbol], `$1${wrap({ tag: symbol, text: '$2' })}$3`);
   });
 
-  const headers = ['1', '2', '3', '4', '5', '6'];
-  headers.forEach((h) => {
-    newText = newText.replace(new RegExp(`<p><h${h}>`, 'g'), `<h${h}>`);
-    newText = newText.replace(new RegExp(`</h${h}></p>`, 'g'), `</h${h}>`);
-  });
   return newText;
 };
 

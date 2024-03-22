@@ -1,7 +1,10 @@
 const parseBlockQuotes = (text) => {
   let newText = text;
-  newText = newText.replace(/^>(.*)\n/gm, '<blockquote>$1</blockquote>');
-  newText = newText.replace(/<\/blockquote><blockquote>/g, '\n');
+  while (newText.match(/^>/gm)) {
+    newText = newText
+      .replace(/^>(.*)/gm, '<blockquote>$1</blockquote>')
+      .replace(/<\/blockquote>\n<blockquote>/g, '\n');
+  }
   return newText;
 };
 

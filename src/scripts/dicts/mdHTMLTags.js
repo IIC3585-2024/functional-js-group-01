@@ -21,8 +21,6 @@ const mdHTMLTags = {
 
   '``': { open_tag: '<code>', close_tag: '</code>' },
   '`': { open_tag: '<code>', close_tag: '</code>' },
-
-  '>': { open_tag: '<blockquote>', close_tag: '</blockquote>' },
 };
 
 export default mdHTMLTags;

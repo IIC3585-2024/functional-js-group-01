@@ -36,7 +36,7 @@ const assignTag = (text) => {
 
 const parseOrdLists = (text) => {
   const convertedTexts = text
-    .replace(/^(\s*)\d+\.(.*)/gm, '$1<li>$2</li>')
+    .replace(/^( *)\d+\.(.*)/gm, '$1<li>$2</li>')
     .split('\n\n')
     .filter((line) => line.match(/^<li>.*<\/li>/))
     .map((line) => line.split('\n'))

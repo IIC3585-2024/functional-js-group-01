@@ -1,10 +1,10 @@
 const mdHeaderRegex = {
-  '######': /^(|<p>|( {4}){0,}(<li>|<ol>)) {0,}#{6} (.+)/gm,
-  '#####': /^(|<p>|( {4}){0,}(<li>|<ol>)) {0,}#{5} (.+)/gm,
-  '####': /^(|<p>|( {4}){0,}(<li>|<ol>)) {0,}#{4} (.+)/gm,
-  '###': /^(|<p>|( {4}){0,}(<li>|<ol>)) {0,}#{3} (.+)/gm,
-  '##': /^(|<p>|( {4}){0,}(<li>|<ol>)) {0,}#{2} (.+)/gm,
-  '#': /^(|( {4}){0,}(<li>|<ol>|<blockquote>)) {0,}# (.+)/gm,
+  '######': /^\s*(<li>|<blockquote>)? *#{6} (.+?)(<\/li>|<\/blockquote>|$)/gm,
+  '#####': /^\s*(<li>|<blockquote>)? *#{5} (.+?)(<\/li>|<\/blockquote>|$)/gm,
+  '####': /^\s*(<li>|<blockquote>)? *#{4} (.+?)(<\/li>|<\/blockquote>|$)/gm,
+  '###': /^\s*(<li>|<blockquote>)? *#{3} (.+?)(<\/li>|<\/blockquote>|$)/gm,
+  '##': /^\s*(<li>|<blockquote>)? *#{2} (.+?)(<\/li>|<\/blockquote>|$)/gm,
+  '#': /^\s*(<li>|<blockquote>)? *# (.+?)(<\/li>|<\/blockquote>|$)/gm,
 };
 
 export default mdHeaderRegex;

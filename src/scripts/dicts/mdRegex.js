@@ -20,8 +20,6 @@ const mdRegex = {
 
   '==': /(.+?)\n+={2,}/g,
   '--': /(.+?)\n+-{2,}/g,
-
-  '>': /^>{1,}(.+)/gm,
 };
 
 export default mdRegex;
