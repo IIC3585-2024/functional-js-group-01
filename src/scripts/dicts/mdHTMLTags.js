@@ -19,6 +19,7 @@ const mdHTMLTags = {
   '==': { open_tag: '<h1>', close_tag: '</h1>' },
   '--': { open_tag: '<h2>', close_tag: '</h2>' },
 
+  '```': { open_tag: '<fencedCode>', close_tag: '</fencedCode>' },
   '``': { open_tag: '<code>', close_tag: '</code>' },
   '`': { open_tag: '<code>', close_tag: '</code>' },
 };
