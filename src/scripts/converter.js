@@ -1,4 +1,3 @@
-import parseWhitespace from './parsers/whitespace.js';
 import parseTags from './parsers/tags.js';
 import parseLists from './parsers/lists/lists.js';
 import parseParagraphs from './parsers/paragraphs.js';
@@ -8,10 +7,11 @@ import parseHeaders from './parsers/headers.js';
 import parseExternals from './parsers/externals/externals.js';
 import parseHorizontalRules from './parsers/horizontalRules.js';
 import parsePipe from './helpers/pipe.js';
+import parseCover from './helpers/coverCompose.js';
+import { transformEscapeChars, parseEscapeChars } from './parsers/escapeChars.js';
 
 // REEMPLAZA ETIQUETAS INTERNAS (bold, italic, bold-italic, code, br, h's)
-const convertMdToHTML = parsePipe([
-  parseWhitespace,
+const parseMd = parsePipe([
   parseHorizontalRules,
   parseTags,
   parseCodes,
@@ -21,5 +21,9 @@ const convertMdToHTML = parsePipe([
   parseParagraphs,
   parseExternals,
 ]);
+
+const coverEscapeChars = parseCover(transformEscapeChars, parseEscapeChars);
+
+const convertMdToHTML = coverEscapeChars(parseMd);
 
 export default convertMdToHTML;
