@@ -1,6 +1,5 @@
 const parseCodeBlocks = (text) => {
   let newText = text;
-  console.log(newText)
   newText = newText
     .replace(/^<fencedCode>([\s\S]+?)<\/fencedCode>/g, (match, captured) => captured.replace(/(.*)(?:\n|$)/g, '<pre><np>$1</np></pre>\n'))
     .replace(/<pre><np><\/np><\/pre>\n/g,'')
@@ -22,7 +21,6 @@ const parseCodeBlocks = (text) => {
     newText = newText.replace(fragment, convertedTexts[index]);
   });
 
-  console.log(newText)
   return newText;
 };
 
