@@ -1,29 +1,25 @@
-import parseNewLines from './parsers/newLines.js';
+import parseWhitespace from './parsers/whitespace.js';
 import parseTags from './parsers/tags.js';
-import parseOrdLists from './parsers/orderedLists.js';
-import parseUnordLists from './parsers/unorderedLists.js';
+import parseLists from './parsers/lists/lists.js';
 import parseParagraphs from './parsers/paragraphs.js';
-import parseCodeBlocks from './parsers/codeBlocks.js';
+import parseCodes from './parsers/codes/codes.js';
 import parseBlockQuotes from './parsers/blockQuotes.js';
 import parseHeaders from './parsers/headers.js';
-import parseLinks from './parsers/links.js';
-import parseImages from './parsers/images.js';
+import parseExternals from './parsers/externals/externals.js';
 import parseHorizontalRules from './parsers/horizontalRules.js';
+import parsePipe from './helpers/pipe.js';
 
 // REEMPLAZA ETIQUETAS INTERNAS (bold, italic, bold-italic, code, br, h's)
-const convertMdToHTML = (text) => {
-  let newText = parseNewLines(text);
-  newText = parseHorizontalRules(newText);
-  newText = parseTags(newText);
-  newText = parseCodeBlocks(newText);
-  newText = parseOrdLists(newText);
-  newText = parseUnordLists(newText);
-  newText = parseBlockQuotes(newText);
-  newText = parseHeaders(newText);
-  newText = parseParagraphs(newText);
-  newText = parseImages(newText);
-  newText = parseLinks(newText);
-  return newText;
-};
+const convertMdToHTML = parsePipe([
+  parseWhitespace,
+  parseHorizontalRules,
+  parseTags,
+  parseCodes,
+  parseBlockQuotes,
+  parseLists,
+  parseHeaders,
+  parseParagraphs,
+  parseExternals,
+]);
 
 export default convertMdToHTML;
