@@ -24,6 +24,7 @@ En general la aplicación realiza las siguientes funcionalidades de conversión:
     - Formatting Links
 - URLs and Email Addresses
 - Images
+- Escaping Characters
 
 ## Contenido y funciones
 El código del programa se encuentra en la carpeta ```src```. A continuación se detalla su contenido.
@@ -59,7 +60,7 @@ Por último se detalla brevemente las funciones más importantes y la lista de p
     - parseHorizontalRules
     - parseParagraphs
     - parseTags
-    - parseWhitespace
+    - parseEscapeChars
 
 
 
