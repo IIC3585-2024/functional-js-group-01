@@ -38,6 +38,8 @@ como vemos estoy usando #dentro y no lo ##toma, tamos bien
 3. Third item
     1. Indented item
     2. Indented item
+3. Indented item
+    2. Indented item
 4. Fourth item
 
 1. First item ALT
@@ -149,7 +151,6 @@ como vemos estoy usando #dentro y no lo ##toma, tamos bien
       </head>
     </html>
 
-
 aaa
 
 ***
@@ -157,6 +158,39 @@ aaa
 Try to put a blank line before...
 
 ---
+
+Escaping characters:
+
+\\ backslash \\
+
+\`\`code\`\`
+
+\* asterisk \*
+
+\_\_underscore\_\_
+
+\{curly brackets\}
+
+\[brackets\]
+
+\<angular brackets\>
+
+\(parenthesis\)
+
+\# pound sign
+
+\+ plus
+
+\- minus
+
+1\. dot, skipping list
+    2\. dot, skipping list
+        5\. dot, skipping list
+
+\!\[abc](https://mdg.imgix.net/assets/images/san-juan-mountains.jpg)
+
+\| pipes
+
 
 ...and after a horizontal rule.
 
